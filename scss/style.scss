@@ -1,10 +1,13 @@
-/* Colors ---------------- */
+/* Reusables ---------------------------------------------------------------- */
 
 $bg-color: #ffe9e7;
 $fg-color: #514a49;
 
-
-/* Reusable classes ------ */
+$mobile-fontsize: 12px;
+$tablet-fontsize: 16px;
+$spacing-ratio: 0.1;
+$mobile-spacing: $mobile-fontsize * $spacing-ratio;
+$tablet-spacing: $tablet-fontsize * $spacing-ratio;
 
 .center {
   display: flex;
@@ -12,37 +15,54 @@ $fg-color: #514a49;
   justify-content: center;
 }
 
+.column {
+  flex-direction: column;
+}
 
-/* Style ----------------- */
+.grow {
+  transition: all .05s ease-in-out;
+}
+.grow:hover {
+  transform: scale(1.05);
+}
+.grow:active {
+  transform: scale(1.1);
+}
+
+
+/* Document ----------------------------------------------------------------- */
 
 html, body {
-  height: 100%;
   font-family: 'Bellefair', serif;
-  font-size: 12px;
-  letter-spacing: 0.1rem;
-}
-
-@media (min-width: 768px) {
-  html, body {
-    font-size: 16px;
+  font-size: $mobile-fontsize;
+  letter-spacing: $mobile-spacing;
+  @media (min-width: 768px) {
+    font-size: $tablet-fontsize;
+    letter-spacing: $tablet-spacing;
   }
-}
-
-#background {
   background-color: $bg-color;
   transition: background-color 1s ease;
   height: 100%;
-  @extend .center;
+  min-height: 600px;
+  @media (min-width: 768px) {
+    min-height: 600px;
+  }
+}
+
+
+/* Quote content ------------------------------------------------------------ */
+
+#content {
+  width: 50%;
+}
+#quote-icon {
+  font-size: 2rem;
+  color: $fg-color;
 }
 
 #content, #quote, #author {
   color: $fg-color;
-  @extend .center;
   text-align: center;
-}
-
-#content {
-  flex-direction: column;
 }
 
 #quote {
@@ -64,10 +84,6 @@ html, body {
   box-shadow: none;
 }
 
-#new-quote-button:hover {
-  background-color: darken($fg-color, 25%);
-}
-
 hr {
     display: block;
     height: 1px;
@@ -78,13 +94,7 @@ hr {
     margin: 2em 0;
 }
 
-.fa {
+#twitter-bird {
   font-size: 2rem;
   color: $fg-color;
-}
-
-#twitter-bird {
-  .fa:hover {
-    color: darken($fg-color, 25%);
-  }
 }
