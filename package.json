@@ -1,0 +1,30 @@
+{
+  "name": "random-quote-machine",
+  "version": "1.0.0",
+  "description": "An app that generates random quotes",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iNaesu/random-quote-machine.git"
+  },
+  "keywords": [
+    "quote",
+    "random",
+    "quotes",
+    "freecodecamp"
+  ],
+  "author": "Sean Law",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iNaesu/random-quote-machine/issues"
+  },
+  "homepage": "https://github.com/iNaesu/random-quote-machine#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
