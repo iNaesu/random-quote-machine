@@ -1,3 +1,22 @@
+/* Start of Script ---------------------------------------------------------- */
+
+$(document).ready(function() {
+  $('#new-quote-button').click(function() {
+    /* Get quote & refresh the app */
+    getQuote(displayApp);
+  });
+
+  /* Tweet quote on Twitter bird click. */
+  $('#twitter-bird').click(function() {
+    const quote = $('#quote').text();
+    const author = $('#author').text();
+    $(this).attr(
+      'href', `https://twitter.com/intent/tweet?text='${quote}' ${author}`
+    );
+  });
+});
+
+
 /* Globals ------------------------------------------------------------------ */
 
 let idx = 0;
@@ -19,7 +38,7 @@ function getQuote(callback) {
       if (quoteData.quote.body.length <= 140) {
         callback(quoteData.quote);
       } else {
-          getQuote(displayApp)
+          getQuote(displayApp);
       }
     },
     error: function(error) {
@@ -65,20 +84,3 @@ function displayApp(quoteData) {
 }
 
 
-/* Start of Script ---------------------------------------------------------- */
-
-$(document).ready(function() {
-  $('#new-quote-button').click(function() {
-    /* Get quote & refresh the app */
-    getQuote(displayApp);
-  });
-
-  /* Tweet quote on Twitter bird click. */
-  $('#twitter-bird').click(function() {
-    const quote = $('#quote').text();
-    const author = $('#author').text();
-    $(this).attr(
-      'href', `https://twitter.com/intent/tweet?text='${quote}' ${author}`
-    );
-  });
-});
