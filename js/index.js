@@ -15,7 +15,12 @@ function getQuote(callback) {
     url: 'https://favqs.com/api/qotd',
     timeout: 5000,
     success: function(quoteData) {
-      callback(quoteData.quote);
+      /* Limit the character count to 140 */
+      if (quoteData.quote.body.length <= 140) {
+        callback(quoteData.quote);
+      } else {
+          getQuote(displayApp)
+      }
     },
     error: function(error) {
       /* Fall back to a hardcoded quote */
