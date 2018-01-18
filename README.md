@@ -1,7 +1,7 @@
 # Random Quote Machine
 
-An app that displays random quotes. See it on
-[Codepen](https://codepen.io/seanlaw/pen/Zyxoya). Features:
+An app that displays random quotes. See it on [Live](https://inaesu.github.io/random-quote-machine/)
+or on [Codepen](https://codepen.io/seanlaw/pen/Zyxoya). Features:
 * Click a button to get a random quote
 * Click a button to tweet the quote
 
