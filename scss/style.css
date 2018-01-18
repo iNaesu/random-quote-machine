@@ -1,0 +1,95 @@
+/* Reusables ---------------------------------------------------------------- */
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.column {
+  flex-direction: column; }
+
+.grow {
+  transition: all .05s ease-in-out; }
+
+.grow:hover {
+  transform: scale(1.05); }
+
+.grow:active {
+  transform: scale(1.1); }
+
+/* Document ----------------------------------------------------------------- */
+html, body {
+  font-family: 'Bellefair', serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+  background-color: #ffe9e7;
+  transition: background-color 1s ease;
+  height: 100%;
+  min-height: 400px; }
+  @media (min-width: 768px) {
+    html, body {
+      font-size: 15px;
+      letter-spacing: 1.5px; } }
+  @media (min-width: 768px) {
+    html, body {
+      min-height: 600px; } }
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end; }
+
+/* Quote content ------------------------------------------------------------ */
+#content {
+  width: 66%; }
+  @media (min-width: 768px) {
+    #content {
+      width: 50%; } }
+
+#quote-icon {
+  font-size: 2rem;
+  color: #514a49; }
+
+#content, #quote, #author {
+  color: #514a49;
+  text-align: center; }
+
+#quote {
+  margin: 2rem 0 1rem 0;
+  font-size: 2rem; }
+
+#new-quote-button {
+  margin: 1rem 0;
+  background-color: #514a49;
+  color: #ffe9e7;
+  font-family: 'Bellefair', serif;
+  border-radius: 0;
+  letter-spacing: 0.1rem; }
+
+#new-quote-button:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+hr {
+  display: block;
+  height: 1px;
+  width: 33%;
+  border: 0;
+  border-top: 1px solid #514a49;
+  padding: 0;
+  margin: 2em 0; }
+
+#twitter-bird {
+  font-size: 2rem;
+  color: #514a49; }
+
+/* About me ----------------------------------------------------------------- */
+#about-me {
+  margin-top: 3rem;
+  margin-bottom: 3rem; }
+  #about-me a {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #514a49; }
