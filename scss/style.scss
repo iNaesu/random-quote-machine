@@ -49,6 +49,12 @@ html, body {
   }
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
 
 /* Quote content ------------------------------------------------------------ */
 
@@ -89,16 +95,32 @@ html, body {
 }
 
 hr {
-    display: block;
-    height: 1px;
-    width: 33%;
-    border: 0;
-    border-top: 1px solid $fg-color;
-    padding: 0;
-    margin: 2em 0;
+  display: block;
+  height: 1px;
+  width: 33%;
+  border: 0;
+  border-top: 1px solid $fg-color;
+  padding: 0;
+  margin: 2em 0;
 }
 
 #twitter-bird {
   font-size: 2rem;
   color: $fg-color;
+}
+
+
+/* About me ----------------------------------------------------------------- */
+
+#about-me {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+
+  a {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    color: $fg-color;
+  }
 }
